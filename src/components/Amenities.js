@@ -34,12 +34,12 @@ export default class Amenities extends Component {
     render() {
         return (
             <section className="amenities">
-                <title title="Amenities" />
+                <Title Title="Amenities" />
                 <div className="amenities-center">
                     {this.state.amenities.map((item, index) => {
                         return <article key={index} className="amenitie">
                             <span>{item.icon}</span>
-                            <h6>{item.title}</h6>
+                            <h6>{item.Title}</h6>
                             <p>{item.info}</p>
                         </article>
                     })}
