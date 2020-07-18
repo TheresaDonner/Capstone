@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
-import Title from './Title'
-import { FaCocktail, FaHamburger, FaSwimmingPool, FaSwimmer } from "react-icons/fa"
+import React, { Component } from 'react';
+import Title from './Title';
+import { FaCocktail, FaHamburger, FaSwimmingPool, FaSwimmer } from "react-icons/fa";
 
 export default class Amenities extends Component {
     state = {
@@ -37,11 +37,12 @@ export default class Amenities extends Component {
                 <Title Title="Amenities" />
                 <div className="amenities-center">
                     {this.state.amenities.map((item, index) => {
-                        return <article key={index} className="amenitie">
+                        return (<article key={index} className="amenitie">
                             <span>{item.icon}</span>
                             <h6>{item.Title}</h6>
                             <p>{item.info}</p>
                         </article>
+                        );
                     })}
                 </div>
             </section>

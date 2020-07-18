@@ -1,8 +1,8 @@
-import React from 'react'
-import Hero from '../components/Hero'
-import Banner from '../components/Banner'
-import { Link } from 'react-router-dom'
-import RoomContainer from '../components/RoomConainer'
+import React from 'react';
+import Hero from '../components/Hero';
+import Banner from '../components/Banner';
+import { Link } from 'react-router-dom';
+import RoomContainer from '../components/RoomConainer';
 
 export default function Rooms() {
     return (

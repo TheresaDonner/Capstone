@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 // import items from './data'
-import Client from './Contentful'
+import Client from './Contentful';
 
 
 const RoomContext = React.createContext();
@@ -33,6 +33,7 @@ class RoomProvider extends Component {
             let featuredRooms = rooms.filter(room => room.featured === true);
             let maxPrice = Math.max(...rooms.map(item => item.price));
             let maxSize = Math.max(...rooms.map(item => item.size));
+
             this.setState({
                 rooms,
                 featuredRooms,
@@ -43,11 +44,10 @@ class RoomProvider extends Component {
                 maxSize
             });
         }
-
         catch (error) {
             console.log(error);
         }
-    }
+    };
 
     componentDidMount() {
         this.getData()
@@ -63,12 +63,12 @@ class RoomProvider extends Component {
             return room;
 
         });
-        return tempItems
+        return tempItems;
     }
 
-    getRoom = (beachside) => {
+    getRoom = beachside => {
         let tempRooms = [...this.state.rooms];
-        const room = tempRooms.find((room) => room.beachside === beachside);
+        const room = tempRooms.find(room => room.beachside === beachside);
         return room;
     };
 
@@ -131,7 +131,7 @@ class RoomProvider extends Component {
         //changing the state
         this.setState({
             sortedRooms: tempRooms
-        })
+        });
     };
 
     render() {
@@ -140,11 +140,6 @@ class RoomProvider extends Component {
                 {this.props.children}
             </RoomContext.Provider>
         );
-
-
-
-
-
     }
 }
 

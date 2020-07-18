@@ -1,10 +1,9 @@
 import React, { Component } from "react";
-import defaultBcg from "../images/room-1.jpeg"
-
-import Banner from "../components/Banner"
-import { Link } from "react-router-dom"
-import { RoomContext } from "../Context"
-import StyledHero from '../components/StyledHero'
+import defaultBcg from "../images/room-1.jpeg";
+import Banner from "../components/Banner";
+import { Link } from "react-router-dom";
+import { RoomContext } from "../Context";
+import StyledHero from "../components/StyledHero";
 
 export default class SingleRoom extends Component {
     constructor(props) {
@@ -31,7 +30,7 @@ export default class SingleRoom extends Component {
         const { name,
             description,
             capacity,
-
+            size,
             price,
             extras,
             pets,
@@ -65,8 +64,10 @@ export default class SingleRoom extends Component {
                             <h3>info</h3>
                             <h6>Price: ${price}</h6>
                             <h6>
-                                max capacity :{" "}
-                                {capacity > 2 ? `${capacity} people` : `${capacity} People `}
+                                <h6>size : ${size} SQFT</h6>
+
+                                    max capacity :{" "}
+                                {capacity > 1 ? `${capacity} people` : `${capacity} Person `}
                             </h6>
                             <h6>breakfast: {breakfast && "Included"}</h6>
                             <h6>{pets ? "pets allowed" : "No Pets Allowed"}</h6>
